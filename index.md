@@ -3,10 +3,6 @@
 Updates
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Learning PCFG
-
 ## Task 1--If Probabilistic Programming Languages can infere probability distributions
 **Given**
 - Production rules (Grammar w/o probabilities)
