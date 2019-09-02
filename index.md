@@ -25,7 +25,6 @@ NN -> 'man'|'woman'|'human'|'animal'
 - Used Pyro PPL (Pytorch) to learn Probabilities associated to production rules.
 
 **Results**
-These are the plots I obtained on Dataset of 10K (in blue) and 100K sentences (in black):
 
 Taking VP productions-
 
@@ -36,5 +35,9 @@ VP -> 'walks' (0.4)| 'runs' (0.2) | 'sleeps' (0.1)| 'reads' (0.15)| 'climbs' (0.
 ```
 
 *Inferred Probabilites*
+
+These are the plots I obtained on Dataset:
+10K (in blue) and 
+100K (in black):
 ![Learning Probabilities](https://github.com/rishabhbhardwaj15/PPL/blob/master/result_1.png)
 
