@@ -35,5 +35,6 @@ VP -> NP VP|DT NN|'The'|'A'|'woman'|'human'|'man'|'animal' - Probability 0
 VP -> 'walks' (0.4)| 'runs' (0.2) | 'sleeps' (0.1)| 'reads' (0.15)| 'climbs' (0.15)
 
 Inferred Probabilites
-![Learning Probabilities](https://github.com/rishabhbhardwaj15/PPL/blob/master/result_1.png)
 ```
+![Learning Probabilities](https://github.com/rishabhbhardwaj15/PPL/blob/master/result_1.png)
+
