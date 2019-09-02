@@ -29,8 +29,11 @@ These are the plots I obtained on Dataset of 10K (in blue) and 100K sentences (i
 
 ```
 The attached figure shows the inferred probabilities for "VP", true production probabilities of which are as follows:
-**VP** production---
+VP productions-
+Actual Probabilities
 VP -> NP VP|DT NN|'The'|'A'|'woman'|'human'|'man'|'animal' - Probability 0
 VP -> 'walks' (0.4)| 'runs' (0.2) | 'sleeps' (0.1)| 'reads' (0.15)| 'climbs' (0.15)
-```
+
+Inferred Probabilites
 ![Learning Probabilities](https://github.com/rishabhbhardwaj15/PPL/blob/master/result_1.png)
+```
