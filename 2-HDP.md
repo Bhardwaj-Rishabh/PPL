@@ -12,15 +12,6 @@ Task considered: Learninng PCFGs-To learn the number of non-terminal symbols, pr
 ## Algorithm
 <img src="https://github.com/rishabhbhardwaj15/PPL/blob/master/hdp.png" width="500">
 
-*Essence*
-```
-Starting from the top node, infer Binomial distribution parameter weather the node will emit a terminal or 
-transmit (a non-terminal pair). If emit, infer categorical distribution over the possible terminal symbols. 
-If transmit, learn Categorical ditribution over infinite number of non-terminal symbol pair. Repeat the procedure
-for all the non-terminal symbols.
-```
-
-*Simplified Implementation*
 ```
 Considering Chomsky-Normal Form of a Context-Free Grammar.
 - A -> B C or
@@ -32,6 +23,15 @@ non-terminals or a terminal symbol. S is start symbol. Null production will appe
 in the language (L(G)) produced by Grammar (G).
 ```
 
+*Essence*
+```
+Starting from the top node S, infer Binomial distribution parameter weather the node will emit a terminal or 
+transmit (a non-terminal pair). If emit, infer categorical distribution over the possible terminal symbols. 
+If transmit, learn Categorical ditribution over infinite number of non-terminal symbol pair. Repeat the procedure
+for all the non-terminal symbols.
+```
+
+*Simplified Implementation*
 ```
 The start symbol S can emit a Terminal symbol or Transition occurs producing a non-temrminal pair of symbols. 
 
@@ -59,4 +59,9 @@ if node Transits:
  
  Now, create pair-wise multiplication matrix M of dimensions nt_sym x nt_sym, reshape it to make it a vector.
  Hence, S -> symi symj ,where ordered pair (symi,symj) ~ Categorical(M)
+```
+
+## Did it work for PCFGs
+```
+Althought the algorithm seems promising, it requires concrete 
 ```
