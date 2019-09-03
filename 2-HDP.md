@@ -25,8 +25,9 @@ produced by Grammar (G).
 ```
 
 ```
-From Start symbols, we can have only two non-terminals produced (or a terminal). We have to choose an ordered pair from infinite possible non-terminal symbols and finite number of terminals (if we know what these are, for english we can take all appearing 
-words as terminals).
+From Start symbols, we can have only two non-terminals produced (or a terminal). We have to choose an ordered pair 
+from infinite possible non-terminal symbols and finite number of terminals (if we know what these are, for english 
+we can take all appearing words as terminals).
 
 For implementation, we need to restrict maximum number of possible non-terminals. Let say nt_symbols=500.
 
