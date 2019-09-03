@@ -61,7 +61,7 @@ if node Transits:
  Hence, S -> symi symj ,where ordered pair (symi,symj) ~ Categorical(M)
 ```
 
-## Did it work for PCFGs
+## Did it work for PCFGs? 
 ```
 Althought the algorithm seems promising, it requires enumerating all possible trees for posterior inference 
 seems intractable.
