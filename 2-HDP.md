@@ -64,5 +64,5 @@ if node Transits:
 ## Did it work for PCFGs
 ```
 Althought the algorithm seems promising, it requires enumerating all possible trees for posterior inference 
-which seems intractable.
+seems intractable.
 ```
