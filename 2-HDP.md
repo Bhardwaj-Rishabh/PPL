@@ -10,4 +10,4 @@ Task considered: Learninng PCFGs-To learn the number of non-terminal symbols, pr
 ```
 
 ## Algorithm
-<img src="https://github.com/rishabhbhardwaj15/PPL/blob/master/HDP.PNG" width="500">
+<img src="https://github.com/rishabhbhardwaj15/PPL/blob/master/hdp.png" width="500">
