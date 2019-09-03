@@ -24,3 +24,17 @@ or a terminal symbol. S is start symbol. Null production will appear only when e
 produced by Grammar (G).
 ```
 
+```
+From Start symbols, we can have only two non-terminals produced (or a terminal). We have to choose an ordered pair from infinite possible non-terminal symbols and finite number of terminals (if we know what these are, for english we can take all appearing 
+words as terminals).
+
+For implementation, we need to restrict maximum number of possible non-terminals. Let say nt_symbols=500.
+
+Now sample from a Beta distribution nt_symbols (500) number of times.
+Let suppose samples are p1,p2,p3,p4..p500, 0<=pi=<1.
+
+Now Stick breaking,
+P1 = p1,             p1 fractiom of the stick occupied by symbol 1)
+P2 = (1-P1)*p2,      from the remaining stick, p2 fraction is occupied by nt symbol 2)
+P3 = (1-(P1+P2))*p3  and so on...
+...
