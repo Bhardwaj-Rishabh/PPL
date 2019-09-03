@@ -9,7 +9,7 @@ Updates
 - Sentences from English Language
 
 **Infer**
--Production Probabilities
+- Production Probabilities
 
 **Experiment**
 - Dataset: Generated the sentences from a simple unambiguous grammar. 
