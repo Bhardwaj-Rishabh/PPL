@@ -53,3 +53,9 @@ if node Transits:
  Hence, S -> symi symj ,where ordered pair (symi,symj) ~ Categorical(M)
 ```
 
+*Essence*
+```
+Starting from the top node, infer Binomial distribution parameter weather the node will emit a terminal or 
+transmit (a non-terminal pair). If emit, infer categorical distribution over the possible terminal symbols. 
+If transmit, learn Categorical ditribution over infinite number of non-terminal symbol pair.
+```
