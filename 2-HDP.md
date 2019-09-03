@@ -25,17 +25,31 @@ produced by Grammar (G).
 ```
 
 ```
-From Start symbols, we can have only two non-terminals produced (or a terminal). We have to choose an ordered pair 
-from infinite possible non-terminal symbols and finite number of terminals (if we know what these are, for english 
-we can take all appearing words as terminals).
+The start symbol S can emit a Terminal symbol or Transition occurs producing a non-temrminal pair of symbols. 
 
-For implementation, we need to restrict maximum number of possible non-terminals. Let say nt_symbols=500.
+To choose from emission ot transition,
 
-Now sample from a Beta distribution nt_symbols (500) number of times.
-Let suppose samples are p1,p2,p3,p4..p500, 0<=pi=<1.
+Consider f ~ Beta(0.5)
+T ~ Binomial(f)
+f is the probabilty of terminal symbol.
 
-Now Stick breaking,
-P1 = p1,             p1 fractiom of the stick occupied by symbol 1)
-P2 = (1-P1)*p2,      from the remaining stick, p2 fraction is occupied by nt symbol 2)
-P3 = (1-(P1+P2))*p3  and so on...
-...
+if node Emits:
+ D ~ Dirichlet(C), C is concentration parameter prior of dimention of possible temrinal symbols.
+ t_sym ~ Categorical(D), sampling terminal symbol
+ 
+if node Transits:
+ We have to choose an ordered pair from infinite possible non-terminal symbols.
+ For implementation, we need to restrict maximum number of possible non-terminals. Let say nt_sym=500.
+
+ Now sample from a Beta distribution nt_sym (500) number of times.
+ Let suppose samples are p1,p2,p3,p4..p500, 0<=pi=<1.
+
+ Now Stick breaking,
+ P1 = p1,             p1 fractiom of the stick occupied by symbol 1)
+ P2 = (1-P1)*p2,      from the remaining stick, p2 fraction is occupied by nt symbol 2)
+ P3 = (1-(P1+P2))*p3  and so on
+ 
+ Now, create pair-wise multiplication matrix M of dimensions nt_sym x nt_sym, reshape it to make it a vector.
+ Hence, S -> symi symj ,where ordered pair (symi,symj) ~ Categorical(M)
+```
+
