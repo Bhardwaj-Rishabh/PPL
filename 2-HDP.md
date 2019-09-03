@@ -34,8 +34,8 @@ T ~ Binomial(f)
 f is the probabilty of terminal symbol.
 
 if node Emits:
- D ~ Dirichlet(C), C is concentration parameter prior of dimention of possible temrinal symbols.
- t_sym ~ Categorical(D), sampling terminal symbol
+ D ~ Dirichlet(C), C is concentration parameter prior of dimention of possible terminal symbols.
+ t_sym ~ Categorical(D), sampling from a distribution of terminal symbols.
  
 if node Transits:
  We have to choose an ordered pair from infinite possible non-terminal symbols.
